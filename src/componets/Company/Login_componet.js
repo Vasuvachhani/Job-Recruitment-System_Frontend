@@ -1,89 +1,99 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import {FaUser,FaLock} from "react-icons/fa"
+
+
 export default function Login_Component() {
-    var [email, setEmail] = useState('');
-    var [Page, setPage] = useState('login');
-    var [password, setPassword] = useState('');
-    const history=useNavigate();
-    const emailfield = {
-        marginLeft: "19px"
-    }
-    const passwordfield = {
-        marginLeft: "33px"
-    }
-    const buttonstyle = {
-        width: "100px",
-        marginTop: "20px",
-        backgroundColor: "#007bff",
-        fontFamily: "Poppins",
-        fontWeight: "bold",
-        color: "#fff"
-    }
-    function emailenter(event) {
-        setEmail(event.target.value);
-    }
-    function passwordenter(event) {
-        setPassword(event.target.value);
+  var [email, setEmail] = useState("");
+  var [Page, setPage] = useState("login");
+  var [password, setPassword] = useState("");
+  const history = useNavigate();
 
+  
+  function emailenter(event) {
+    setEmail(event.target.value);
+  }
+  function passwordenter(event) {
+    setPassword(event.target.value);
+  }
+ 
+
+  function btnclick(event) {
+    event.preventDefault();
+    console.log(email);
+    console.log(password);
+    try {
+      axios
+        .post("http://localhost:3000/Company_login", {
+          email: email,
+          pass: password,
+        })
+        .then((obj) => {
+          if (obj.status === "201") {
+            alert("welcome");
+            window.localStorage.setItem("token", obj.data.data);
+            window.localStorage.setItem("email", email);
+            window.localStorage.setItem("type", "company");
+            setPage("true");
+            history("/companydashboard");
+          } else {
+            alert(obj.data.error);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } catch (error) {
+      alert(error);
     }
-    const iconstyle = {
-        fontSize: "24px",
-        marginTop: "8px",
-        color: "#007bff"
-    };
-
-    function btnclick(event) {
-        event.preventDefault();
-        console.log(email);
-        console.log(password);
-        try {
-            axios.post("http://localhost:3000/Company_login", {
-                email: email, 
-                pass: password
-            }).then((obj)=>{
-                if (obj.status == "201") {
-
-                    alert("welcome")
-                    window.localStorage.setItem("token", obj.data.data);
-                    window.localStorage.setItem("email", email);
-                    window.localStorage.setItem("type", "company");
-                    setPage("true");
-                    history("/companydashboard");
-                }
-                else{
-                    alert(obj.data.error);
-                }
-            }).catch((error)=>{
-                console.log(error);
-            })
-        } catch (error) {
-            alert(error);
-        }
-    }
-    return (<><div className="login-div">
-
-        <label className="parent_label">Sign in</label>
+  }
+  return (
+    <>
+    <div className="bg2">
+      <div className="login-div1">
+        <h1>Sign In</h1>
         <form onSubmit={btnclick}>
-            <div className="input-div">
-                <i className="fa fa-envelope" style={iconstyle} ></i>
-                <div className="input-bx" style={emailfield}>
-                    <input type="email" required="required" onChange={emailenter} value={email} />
-                    <span className="span-text">Email Id</span>
-                </div>
+          <div className="input-div1">
+           
+            <div className="input-bx1" >
+              <input
+                type="email"
+                required="required"
+                onChange={emailenter}
+                value={email}
+                placeholder="Email"
+              /> 
+            <FaUser className="icon"/>
             </div>
+          </div>
 
-            <div className="input-div1">
-                <i className="gg-password" style={iconstyle} ></i>
-                <div className="input-bx" style={passwordfield}>
-                    <input type="password" required="required" onChange={passwordenter} minLength={6} value={password} />
-                    <span className="span-text">Password</span>
-                </div>
+          <div className="input-div1">
+           
+            <div className="input-bx1">
+              <input
+                type="password"
+                required="required"
+                onChange={passwordenter}
+                minLength={6}
+                placeholder="Password"
+                value={password}
+              />
+                <FaLock className="icon"/>
             </div>
-            <div className="d-flex justify-content-center">
-                <button type="submit" className="centered-button" style={{ marginTop: "20px", fontFamily: "Poppins" }}>Log In</button>
-            </div>
-
+          </div>
+          <div className="d-flex justify-content-center">
+            <button
+              type="submit"
+              className="centered-button1"
+            //   style={{ marginTop: "20px", fontFamily: "Poppins" }}
+            >
+              Log In
+            </button>
+          </div>
         </form>
-    </div></>)
+      </div>
+      </div>
+    </>
+  );
 }

@@ -1,0 +1,166 @@
+.sidebar {
+  height: 100%;
+  width: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #007bff;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Sidebar header */
+.sidebar-header {
+  text-align: center;
+  padding: 10px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Sidebar icons */
+.fa {
+  padding-right: 10px;
+}
+
+/* Sidebar menu items */
+.sidebar-menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
+
+/* Active (selected) menu item */
+.sidebar-menu li.active {
+  background-color: white;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Hover effect */
+.sidebar-menu li:hover {
+  background-color: #ffffff30;
+}
+
+.input-bx {
+  padding-left: 15px; 
+}
+
+.ilebel {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.line {
+  display: inline-block;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.dline {
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 15px;
+}
+
+.card1{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    max-width: 100%;
+
+}
+.card1-img-top {
+  margin-top: 10px;
+  max-width: 100%;
+  margin-left: 35px;
+  height: auto;
+}
+
+.card-body1 {
+  padding: 20px;
+}
+
+.card-title1 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.list-group-item {
+  padding: 10px;
+  border: none;
+}
+
+.centered-button1 {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.centered-button1:hover {
+  opacity: 0.8;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+.p-4 {
+  padding: 1.5rem;
+}
+
+
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: bold;
+  outline: none;
+  font-size: 16px;
+  text-align: center;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.button:hover {
+  background-color: #34495e; /* Darker color on hover */
+  transform: scale(1.05);
+}
+
+.button-green {
+  background-color: #2ecc71;
+}
+
+.button-green:hover {
+  background-color: #27ae60;
+}
+
+.button-red {
+  background-color: #e74c3c;
+}
+
+.button-red:hover {
+  background-color: #c0392b;
+}

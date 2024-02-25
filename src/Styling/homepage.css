@@ -1,0 +1,248 @@
+body{
+  background-color: #f1f1f9;
+}
+
+/*homepage css*/
+.bg {
+    background-size: cover;
+     background-position: center;
+     min-height: 70vh;
+     padding-top: 80px; 
+   }
+   img{
+     width: 90%;
+   }
+ .btn-lg{
+ width: 150px;
+ margin-right: 10px;
+ color: white;
+ }
+  a{
+   color: white;
+   text-decoration: none;
+  }
+  
+ @keyframes fadeInRight {
+     from {
+       opacity: 0;
+       transform: translateX(50px);
+     }
+     to {
+       opacity: 1;
+       transform: translateX(0);
+     }
+   }
+  
+   @keyframes fadeInLeft {
+     from {
+       opacity: 0;
+       transform: translateX(-50px);
+     }
+     to {
+       opacity: 1;
+       transform: translateX(0);
+     }
+   }
+   
+   .bg .rounded {
+     animation: fadeInRight 1s ease-out forwards;
+   }
+   
+   .text-black {
+     animation: fadeInLeft 1s ease-out forwards;
+   }
+   
+   /*about page css*/
+   
+.bg-img { 
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 80px; 
+  }
+  
+  .py-5 {
+    padding: 3rem 1rem; 
+  }
+  
+ 
+  .animation{
+    text-align: center;
+  }
+  
+  .animation h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+  
+  .animation p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+ 
+  .animation {
+    animation: fadeInRight 3s ease-out forwards;
+  }
+
+
+  /*Services css*/
+  .box {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+.card {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  
+  .service-card img {
+    object-fit: cover;
+    height: 200px;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .service-card .card-body {
+    padding: 20px;
+  }
+  
+  .service-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .service-card .card-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  img{
+    height: 250px;
+  }
+
+  
+  /* Testimonials css */
+
+.testimonials-section {
+ background-color: #f9f9f9;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.testimonial-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.testimonial-card {
+  margin-bottom: 20px;
+}
+
+ 
+.card-body {
+  padding: 20px;
+}
+
+.testimonial-content {
+  color: #555;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+}
+
+.testimonial-avatar {
+  margin-right: 10px;
+}
+
+.avatar-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.author-details {
+  flex-grow: 1;
+}
+
+.author-name {
+  font-weight: bold;
+}
+
+.author-position {
+  color: #888;
+  font-size: 0.8rem;
+}
+
+/* Contact css*/
+
+.container1{
+  margin-top: 50px;
+}
+.contact-details {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  
+}
+.contact-details p {
+  margin-bottom: 15px;
+  
+}
+
+
+/*footer css*/
+
+.main{
+  background-color: #b0aeae;
+  color:black;
+  font-weight: 600;
+  max-width: 100%;
+  height: auto;
+  padding-top:20px ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

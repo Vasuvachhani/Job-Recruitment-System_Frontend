@@ -1,0 +1,126 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg5{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('/src/componets/images/login1.avif')no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    }
+    
+.login-div5{
+    width: 460px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    overflow: hidden;
+}
+.login-div5 h1{
+    font-size: 36px;
+    text-align: center;
+    margin-top: -18px;
+}
+
+.input-bx5{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 25px 0;
+}
+.input-bx5 input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-bx5 input::placeholder{
+    color: #fff;
+}
+.input-bx5 textarea{
+    width: 100%;
+    height: 130%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+    overflow: hidden;
+    margin-top: -8px;;
+}
+.input-bx5 textarea::placeholder{
+    color: #fff;
+}
+.input-bx5 .span-text  .form-control{
+    width: 100%;
+    height: 130%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border:2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-bx5 i{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size: 16px;
+}
+
+
+
+.centered-button5{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 28px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s,color 0.3s, border-color 0.3s,text-shadow 0.3s;
+}
+.centered-button5:hover{
+    background-color: #1926e7; 
+    transform: scale(1.05) ;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    color: #fff; 
+    border-color: #45a049;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+

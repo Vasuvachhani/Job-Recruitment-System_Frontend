@@ -1,7 +1,9 @@
 import React,{ useState,useEffect} from "react";
 import axios from "axios";
 import Unverified_Company from "./Unverified_Companies";
+
 import Company_view from "./Company_view";
+
 export default function Verified_Company()
 {
     const [user, setUserData] = useState({Data:[]});

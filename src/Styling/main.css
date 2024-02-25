@@ -9,7 +9,7 @@ body {
   background-color: #f0f0f0;
 
 
-    /* justify-content: center; */
+    justify-content: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -74,11 +74,10 @@ body {
 
 .centered-button:hover {
   background-color: #0056b3;
-  /* Darker blue on hover */
   color: white;
-  /* Text color remains white */
-
+  
 }
+
 
 .container {
   display: flex;

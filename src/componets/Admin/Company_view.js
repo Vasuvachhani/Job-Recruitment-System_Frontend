@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import "./Styles/admin.css";
+
 export default function Company_view(props) {
   const [loading, setLoading] = useState(false);
   const [loading1, setLoading1] = useState(false);
@@ -10,7 +12,6 @@ export default function Company_view(props) {
   var [status, setStatus] = useState(false);
   const iconstyle = {
     fontSize: "24px",
-
     marginTop: "8px",
   };
   const emailfield = {
@@ -122,16 +123,16 @@ export default function Company_view(props) {
   return (
     <>
       <div
-        className="card"
-        style={{ width: "700px", marginTop: "20px", marginLeft: "270px" }}
+        className="card1"
+        style={{ width: "700px", marginTop: "10px", marginLeft: "480px" }}
       >
-        {props.show != "true" ? (
-          <img src={props.img} className="card-img-top" alt="..." />
+        {props.show !== "true" ? (
+          <img src={props.img} className="card1-img-top" alt="..." />
         ) : null}
-        <div className="card-body">
-          <h5 className="card-title">
-            <i class="fa fa-building-o" aria-hidden="true"></i>Company Name:-
-            {props.name}
+        <div className="card-body1">
+          <h5 className="card-title1">
+            <i class="fa fa-building-o" aria-hidden="true"></i>Company Name :- 
+             {props.name}
           </h5>
           <ul class="list-group list-group-flush">
             <li className="list-group-item">
@@ -150,21 +151,21 @@ export default function Company_view(props) {
               <i class="fa fa-envelope" aria-hidden="true"></i>Email:-
               {props.email}
             </li>
-            {props.status == "unverified" ? (
+            {props.status === "unverified" ? (
               <li
-                className="card text-center"
-                style={{ alignItems: "center", margin: "20px", border: "none" }}
+                className="text-center"
+                style={{ alignItems: "center", margin: "20px", border: "none",listStyle:"none" }}
               >
-                <div>
+                <div className="button-container">
                   <button
-                    className="centered-button1"
-                    style={{ marginRight: "20px", background: "green" }}
+                    className="button button-green"
+                    style={{ background: "green" }}
                     onClick={Approve}
                   >
                     {loading ? "Loading..." : "Approve"}
                   </button>
                   <button
-                    className="centered-button1"
+                    className="button button-red"
                     style={{ background: "red" }}
                     onClick={Reject}
                   >
@@ -177,7 +178,7 @@ export default function Company_view(props) {
             )}
           </ul>
 
-          {props.show == "true" ? (
+          {props.show === "true" ? (
             <div className="mb-5">
               <p className="lead fw-normal mb-1">About Company</p>
               <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
@@ -231,7 +232,7 @@ export default function Company_view(props) {
                     </div>
 
                     <form onSubmit={ApplyforVisitRequest}>
-                      {status == true ? null : (
+                      {status === true ? null : (
                         <>
                           {" "}
                           <li
@@ -284,9 +285,9 @@ export default function Company_view(props) {
                           </li>
                         </>
                       )}
-                      
-                      {props.show == "true" ? (
-                        status == true ? (
+
+                      {props.show === "true" ? (
+                        status === true ? (
                           <button
                             className="centered-button"
                             type="submit"

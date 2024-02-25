@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bg2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('/src/componets/images/login1.avif')no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-div1{
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,.2);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    color: #fff;
+    padding: 30px 40px;
+}
+.login-div1 h1{
+    font-size: 48px;
+    text-align: center;
+    align-items: center;
+}
+
+.input-bx1{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-bx1 input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255,255,255,.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+.input-bx1 input::placeholder{
+    color: #fff;
+}
+
+.input-bx1 .icon{
+    position: absolute;
+    right: 20px;
+    top:50%;
+    transform:translateY(-50%);
+    font-size: 16px;
+}
+
+.centered-button1{
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: rgba(0,0,0,.1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 700;
+    margin-bottom: 28px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s,color 0.3s, border-color 0.3s,text-shadow 0.3s;
+}
+
+
+.centered-button1:hover{
+    background-color: #1926e7; 
+    transform: scale(1.05) ;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
+    color: #fff; 
+    border-color: #45a049;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}

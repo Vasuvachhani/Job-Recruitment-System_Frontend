@@ -1,7 +1,9 @@
+/* eslint-disable react/jsx-pascal-case */
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate
 import Company_List from './Company_List';
 import Verified_Company from './Verified_company_list';
+import "./Styles/admin.css"
 
 const Sidebar = () => {
   const [selectedField, setSelectedField] = useState('Dashboard');
@@ -50,7 +52,7 @@ const Sidebar = () => {
         </li>
       </ul>
     </div>
-    {selectedField=="Dashboard"?<Company_List/>:<Verified_Company/>}
+    {selectedField==="Dashboard"?<Company_List/>:<Verified_Company/>}
     
     </>
   );

@@ -19,7 +19,7 @@ console.log(user.Data);
 
   return (
     <>
-    <h1 style={{marginLeft:"245px",marginTop:"20px"}}>Company List</h1>
+    <h1 style={{marginLeft:"670px",marginTop:"25px"}}>Company List</h1>
       {user.Data.map((company) => (
         <div key={company._id}><Unverified_Company status="unverified" name={company.Company_name} mobile={company.Mobile_no} email={company.Email} image={company.Certificate} address={company.Address} verfied={company.Verified}/></div>
       ))}
