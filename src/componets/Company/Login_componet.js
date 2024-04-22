@@ -30,7 +30,7 @@ export default function Login_Component() {
           pass: password,
         })
         .then((obj) => {
-          if (obj.status === "201") {
+          if (obj.status === 201) {
             alert("welcome");
             window.localStorage.setItem("token", obj.data.data);
             window.localStorage.setItem("email", email);
@@ -88,7 +88,7 @@ export default function Login_Component() {
               className="centered-button1"
             //   style={{ marginTop: "20px", fontFamily: "Poppins" }}
             >
-              Log In
+              LogIn
             </button>
           </div>
         </form>

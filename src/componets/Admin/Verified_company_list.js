@@ -21,7 +21,7 @@ export default function Verified_Company()
       , []);
       console.log(user.Data);
     return(<>
-     <h1 style={{marginLeft:"200px",marginTop:"20px"}}>Verified Company List:-</h1>
+     <h1 style={{marginLeft:"520px",marginTop:"20px"}}>Verified Company List:-</h1>
       {user.Data.map((company) => (
         <div key={company._id}><Company_view status="verified"name={company.Company_name} mobile={company.Mobile_no} email={company.Email} img={company.Certificate} address={company.Address} verfied={company.Verified}/></div>
       ))}</>)

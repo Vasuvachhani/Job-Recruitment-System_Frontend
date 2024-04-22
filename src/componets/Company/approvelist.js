@@ -18,7 +18,7 @@ export default function ApproveList() {
   };
 
   return (
-    <div className="card center" style={{ width: "900px", marginLeft: "260px", marginTop: "40px" }}>
+    <div className="card center" style={{ width: "900px", marginLeft: "370px", marginTop: "40px" }}>
       <div className="card-header">
         <button
           className="centered-button"

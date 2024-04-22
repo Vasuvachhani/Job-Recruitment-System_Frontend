@@ -40,7 +40,7 @@ export default function Jobber_Visit_Request() {
     setRefresh(true);
   }
   return (<>
-    <div style={{ width: "900px", marginLeft: "270px",marginTop:"20px"}}>
+    <div style={{ width: "900px", marginLeft: "370px",marginTop:"20px"}}>
             <label className="parent_label" style={{ marginLeft: "0px" }}>Visit Requests</label>
             {rdata.length === 0 ? <NotFound data="No visit requests are available at the moment." /> : null}
 

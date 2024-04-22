@@ -19,7 +19,7 @@ export default function Resume_View(props)
     }
     return(<>
           {props.user.status == "true" && props.user.resume == "true" ? (
-        <ResumeTemplete user={props.user} mleft="270px" />
+        <ResumeTemplete user={props.user} mleft="100px" />
       ) : null}
       {props.user.status == "false" && props.user.resume == "null" && data==false ? (
         <ResumeBuilder user={props.user} setdata={datahandle} />

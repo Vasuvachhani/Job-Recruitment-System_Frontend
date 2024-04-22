@@ -34,19 +34,19 @@ export default function Unverified_Company(props) {
         <div className="input-bx">
           <label className="ilebel">Company Name</label>
           <br />
-          <label className="line">{props.name}</label>
+          <label className="iline">{props.name}</label>
         </div>
         <div className="dline"></div>
         <div className="input-bx">
           <label className="ilebel">Mobile No.</label>
           <br />
-          <label className="line">{props.mobile}</label>
+          <label className="iline">{props.mobile}</label>
         </div>
         <div className="dline"></div>
         <div className="input-bx">
           <label className="ilebel">Email id</label>
           <br />
-          <label className="line">{props.email}</label>
+          <label className="iline">{props.email}</label>
         </div>
         <div className="dline"></div>
 

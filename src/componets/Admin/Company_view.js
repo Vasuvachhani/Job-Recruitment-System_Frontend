@@ -123,32 +123,32 @@ export default function Company_view(props) {
   return (
     <>
       <div
-        className="card1"
-        style={{ width: "700px", marginTop: "10px", marginLeft: "480px" }}
+        className="cardd1"
+        
       >
         {props.show !== "true" ? (
           <img src={props.img} className="card1-img-top" alt="..." />
         ) : null}
         <div className="card-body1">
           <h5 className="card-title1">
-            <i class="fa fa-building-o" aria-hidden="true"></i>Company Name :- 
+            <i className="fa fa-building-o" aria-hidden="true"></i><span className="bold">Company Name :-</span> 
              {props.name}
           </h5>
-          <ul class="list-group list-group-flush">
+          <ul className="list-group list-group-flush">
             <li className="list-group-item">
-              <i class="fa fa-address-card" aria-hidden="true"></i>Address:-
+              <i className="fa fa-address-card" aria-hidden="true"></i><span className="bold">Company Name :-</span> Address:-
               {props.address}
             </li>
             <li className="list-group-item">
               <i
-                class="fa fa-mobile"
+                className="fa fa-mobile"
                 aria-hidden="true"
                 style={{ fontSize: "20px", width: "20px" }}
               ></i>
-              Mobile No.:-{props.mobile}
+             <span className="bold"> Mobile No :-</span> {props.mobile}
             </li>
             <li className="list-group-item">
-              <i class="fa fa-envelope" aria-hidden="true"></i>Email:-
+              <i className="fa fa-envelope" aria-hidden="true"></i><span className="bold">Email :-</span> 
               {props.email}
             </li>
             {props.status === "unverified" ? (
@@ -159,7 +159,7 @@ export default function Company_view(props) {
                 <div className="button-container">
                   <button
                     className="button button-green"
-                    style={{ background: "green" }}
+                    style={{ background: "green",marginBottom:"20px" }}
                     onClick={Approve}
                   >
                     {loading ? "Loading..." : "Approve"}
@@ -180,19 +180,19 @@ export default function Company_view(props) {
 
           {props.show === "true" ? (
             <div className="mb-5">
-              <p className="lead fw-normal mb-1">About Company</p>
+              <p className="lead fw-bold mb-1 mt-2">About Company</p>
               <div className="p-4" style={{ backgroundColor: "#f8f9fa" }}>
                 {data ? (
                   <>
                     <p className="font-italic mb-1">
-                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                      <i className="fa fa-asterisk" aria-hidden="true"></i>
                       {data.description}
                     </p>
                     <p className="font-italic mb-1">
-                      <i class="fa fa-clock-o" aria-hidden="true"></i>Opening
+                      <i className="fa fa-clock-o" aria-hidden="true"></i>Opening
                       Time:-{data.opening_time}
                       <i
-                        class="fa fa-clock-o"
+                        className="fa fa-clock-o"
                         aria-hidden="true"
                         style={{ marginLeft: "40px" }}
                       ></i>
@@ -200,21 +200,21 @@ export default function Company_view(props) {
                     </p>
                     <div className="d-flex justify-content-between align-items-center mb-4">
                       <p
-                        className="lead fw-normal mb-0"
+                        className="lead fw-bold mb-0"
                         style={{ marginTop: "10px" }}
                       >
-                        photos
+                        Photos
                       </p>
                     </div>
                     <div className="row g-2">
-                      <div class="col mb-2">
+                      <div className="col mb-2">
                         {leftColumn.map((image, index) => (
                           <img
                             key={index}
                             src={image}
                             alt={`Image ${index}`}
                             className="w-100 rounded-3"
-                            style={{ height: "200px", margin: "10px" }}
+                            style={{ height: "200px", margin: "5px" }}
                           />
                         ))}
                       </div>
@@ -225,7 +225,7 @@ export default function Company_view(props) {
                             src={image}
                             alt={`Image ${index}`}
                             className="w-100 rounded-3"
-                            style={{ height: "200px", margin: "10px" }}
+                            style={{ height: "200px", margin: "5px" }}
                           />
                         ))}
                       </div>
@@ -249,7 +249,7 @@ export default function Company_view(props) {
                                 style={iconstyle}
                               ></i>
                               <h5 style={{ marginTop: "10px" }}>Visit Date</h5>
-                              <div className="input-bx" style={emailfield}>
+                              <div className="inputt-bx" style={emailfield}>
                                 <input
                                   type="date"
                                   required="required"
@@ -273,7 +273,7 @@ export default function Company_view(props) {
                                 style={iconstyle}
                               ></i>
                               <h5 style={{ marginTop: "10px" }}>Visit time</h5>
-                              <div className="input-bx" style={emailfield}>
+                              <div className="inputt-bx" style={emailfield}>
                                 <input
                                   type="time"
                                   required="required"
@@ -289,7 +289,7 @@ export default function Company_view(props) {
                       {props.show === "true" ? (
                         status === true ? (
                           <button
-                            className="centered-button"
+                            className="centeredd-button"
                             type="submit"
                             style={{ marginLeft: "260px", marginTop: "10px" }}
                             disabled
@@ -298,7 +298,7 @@ export default function Company_view(props) {
                           </button>
                         ) : (
                           <button
-                            className="centered-button"
+                            className="centeredd-button"
                             type="submit"
                             style={{ marginLeft: "260px", marginTop: "10px" }}
                           >
